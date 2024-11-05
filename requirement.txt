@@ -1,0 +1,7 @@
+pymongo==4.10.1
+python-dotenv
+certifi
+PyYAML
+dill
+imblearn
+xgboost
