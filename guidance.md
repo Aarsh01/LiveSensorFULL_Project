@@ -238,3 +238,10 @@ Error occured and the file name is [d:\Bakchodi\LiveSensor\LiveSensor_FULL_MLPro
     - **To build the file "sensor.component.model_pusher.py" :
 
 
+*******************************************************************************
+
+## Fast API:
+    1. sensor/constant/application.py file :
+        a. APP_HOST - have ip address - (localhost or any ip address such that 0.0.0.0)
+        b. APP_PORT - post number - 8000 or 8080
+    2. import the file in main.py to run the fast api.
