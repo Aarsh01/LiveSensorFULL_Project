@@ -29,7 +29,7 @@ share/python-wheels/
 MANIFEST
 artifact/
 LiveSensor_FULL_MLProject/logs
-sensor/constant/env_variable.py
+
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

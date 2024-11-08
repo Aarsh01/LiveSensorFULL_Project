@@ -245,3 +245,24 @@ Error occured and the file name is [d:\Bakchodi\LiveSensor\LiveSensor_FULL_MLPro
         a. APP_HOST - have ip address - (localhost or any ip address such that 0.0.0.0)
         b. APP_PORT - post number - 8000 or 8080
     2. import the file in main.py to run the fast api.
+
+*******************************************************************************
+
+## Deploy the project:
+    - Data Storage - S3 - Bucket
+    - ECR - Elastic Container Registry 
+    - EC2 - Virtual Machine - Ubuntu
+    - IAM - User
+
+    ** WE WILL BE USING GITHUB ACTIONS TO DEPLOY **
+
+    1. make .github folder -> workflow -> main.yml - For github actions 
+    2. In sensor/cloud_storage/s3_syncer.py folder :
+        a. Write code related to the s3 bucket. 
+    3. In sensor/constant/s3_bucket.py folder :
+        a. Declare the variables i.e "TRAINING_BUCKET_NAME" & "PREDICTION_BUCKET_NAME"
+    4. Update the file - sensor/pipeline/training_pipeline.py file 
+    
+    5. build dockerfile:
+        a. 
+

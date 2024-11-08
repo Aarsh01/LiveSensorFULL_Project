@@ -40,17 +40,17 @@ async def train():
         logging.exception("Training failed")
         return Response(content=f"Error Occurred! {e}", status_code=500)
 
-@app.post("/predict", tags=["prediction"])
-async def predict(file: UploadFile = File(...)):
-    try:
-        model_resolver = ModelResolver()
-        model = model_resolver.get_model()
-        data = pd.read_csv(file.file)
-        predictions = model.predict(data)
-        return {"predictions": predictions.tolist()}
-    except Exception as e:
-        logging.exception("Prediction failed")
-        return Response(content=f"Error Occurred! {e}", status_code=500)
+# @app.post("/predict", tags=["prediction"])
+# async def predict(file: UploadFile = File(...)):
+#     try:
+#         model_resolver = ModelResolver()
+#         model = model_resolver.get_model()
+#         data = pd.read_csv(file.file)
+#         predictions = model.predict(data)
+#         return {"predictions": predictions.tolist()}
+#     except Exception as e:
+#         logging.exception("Prediction failed")
+#         return Response(content=f"Error Occurred! {e}", status_code=500)
 
 
 # def main():
